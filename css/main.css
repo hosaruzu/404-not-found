@@ -1,1 +1,166 @@
-/*# sourceMappingURL=main.css.map */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  justify-content: space-between;
+}
+@media (max-width: 1050px) {
+  body {
+    gap: 35px;
+  }
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 77px;
+  margin: 0 auto;
+}
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
+.header {
+  padding-top: 40px;
+  font-family: "Inconsolata", monospace;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 25px;
+  letter-spacing: -0.08em;
+  font-weight: 700;
+  color: #333;
+}
+@media (max-width: 1050px) {
+  .header {
+    padding-top: 20px;
+  }
+}
+
+.main {
+  font-family: "Space Mono", monospace;
+}
+.main__container {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1050px) {
+  .main__container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
+.main__img {
+  max-width: 40%;
+  height: 100%;
+}
+@media (max-width: 1050px) {
+  .main__img {
+    max-width: 60%;
+  }
+}
+@media (max-width: 800px) {
+  .main__img {
+    max-width: 80%;
+  }
+}
+.main__content {
+  max-width: 586px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main__heading {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 95px;
+  letter-spacing: -0.035em;
+  color: #333;
+  margin-bottom: 36px;
+}
+@media (max-width: 1200px) {
+  .main__heading {
+    font-size: 48px;
+    line-height: 71px;
+    margin-bottom: 30px;
+  }
+}
+.main__paragraph {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -0.035em;
+  color: #4f4f4f;
+  margin-bottom: 64px;
+}
+@media (max-width: 1200px) {
+  .main__paragraph {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+.main__btn {
+  align-self: flex-start;
+  border: none;
+  background-color: #333;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 23px 43px;
+  font-family: inherit;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+.main__btn:hover {
+  background-color: #bdbdbd;
+  color: #333;
+}
+.main__btn:active {
+  transform: scale(0.95);
+}
+
+.footer {
+  font-family: "Montserrat", sans-serif;
+  color: #bdbdbd;
+  text-align: center;
+  font-weight: 500;
+  padding-bottom: 40px;
+  font-size: 14px;
+  line-height: 17px;
+}
+@media (max-width: 1050px) {
+  .footer {
+    padding-bottom: 20px;
+  }
+}
+
+.github-link:link,
+.github-link:visited {
+  font-family: inherit;
+  font-weight: 700;
+  color: inherit;
+  transition: color 0.2s;
+}
+
+.github-link:hover,
+.github-link:active {
+  color: #333;
+}/*# sourceMappingURL=main.css.map */

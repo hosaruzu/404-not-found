@@ -1,0 +1,181 @@
+$inconsolata: "Inconsolata", monospace;
+$space-mono: "Space Mono", monospace;
+$montserrat: "Montserrat", sans-serif;
+
+$color-dark: #333;
+$color-grey-dark: #4f4f4f;
+$color-grey-light: #bdbdbd;
+$color-light: #fff;
+
+$large: 1200px;
+$tablet: 1050px;
+$mobile: 800px;
+
+@mixin bp($point) {
+  @media (max-width: $point) {
+    @content;
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  justify-content: space-between;
+
+  @include bp($tablet) {
+    gap: 35px;
+  }
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 77px;
+  margin: 0 auto;
+
+  @include bp($large) {
+    padding: 0 24px;
+  }
+}
+
+.header {
+  padding-top: 40px;
+  font-family: $inconsolata;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 25px;
+  letter-spacing: -0.08em;
+  font-weight: 700;
+  color: $color-dark;
+
+  @include bp($tablet) {
+    padding-top: 20px;
+  }
+}
+.main {
+  font-family: $space-mono;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    @include bp($tablet) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+  }
+  &__img {
+    max-width: 40%;
+    height: 100%;
+
+    @include bp($tablet) {
+      max-width: 60%;
+    }
+
+    @include bp($mobile) {
+      max-width: 80%;
+    }
+  }
+
+  &__content {
+    max-width: 586px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__heading {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 95px;
+    letter-spacing: -0.035em;
+    color: $color-dark;
+    margin-bottom: 36px;
+
+    @include bp($large) {
+      font-size: 48px;
+      line-height: 71px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__paragraph {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -0.035em;
+    color: $color-grey-dark;
+    margin-bottom: 64px;
+    @include bp($large) {
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+
+  &__btn {
+    align-self: flex-start;
+    border: none;
+    background-color: $color-dark;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.035em;
+    text-transform: uppercase;
+    color: $color-light;
+    padding: 23px 43px;
+    font-family: inherit;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+
+    &:hover {
+      background-color: $color-grey-light;
+      color: $color-dark;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
+
+.footer {
+  font-family: $montserrat;
+  color: $color-grey-light;
+  text-align: center;
+  font-weight: 500;
+  padding-bottom: 40px;
+  font-size: 14px;
+  line-height: 17px;
+
+  @include bp($tablet) {
+    padding-bottom: 20px;
+  }
+}
+
+.github-link:link,
+.github-link:visited {
+  font-family: inherit;
+  font-weight: 700;
+  color: inherit;
+  transition: color 0.2s;
+}
+
+.github-link:hover,
+.github-link:active {
+  color: $color-dark;
+}
